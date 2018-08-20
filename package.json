@@ -2,7 +2,10 @@
   "name": "javascript-development-environment",
   "version": "1.0.0",
   "description": "JavaScript development environment Pluralsight course by Cory House",
-  "scripts": {},
+  "scripts": {
+    "start": "npm-run-all security-check",
+    "security-check": "nsp check"
+  },
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
