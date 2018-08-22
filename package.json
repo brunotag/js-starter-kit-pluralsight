@@ -6,7 +6,9 @@
     "prestart": "node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel security-check open:src",
     "open:src": "node buildScripts/srcServer.js",
-    "security-check": "nsp check"
+    "security-check": "nsp check",
+    "preshare": "now login && now-clear",
+    "share": "now --public"
   },
   "author": "Cory House",
   "license": "MIT",
@@ -33,6 +35,8 @@
     "localtunnel": "1.9.0",
     "mocha": "3.1.2",
     "nock": "8.1.0",
+    "now": "11.3.11",
+    "now-clear": "0.0.3",
     "npm-run-all": "3.1.1",
     "nsp": "2.6.2",
     "numeral": "1.5.3",
