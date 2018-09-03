@@ -10,7 +10,8 @@
     "lint:watch": "npm run lint -- --watch",
     "security-check": "nsp check",
     "preshare": "now login && now-clear",
-    "share": "now --public"
+    "share": "now --public",
+    "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\""
   },
   "author": "Cory House",
   "license": "MIT",
