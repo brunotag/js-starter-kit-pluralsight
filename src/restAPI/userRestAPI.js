@@ -1,5 +1,3 @@
-import 'whatwg-fetch';
-
 export function getUsers() {
   return get('users');
 }
