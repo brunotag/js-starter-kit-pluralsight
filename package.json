@@ -12,7 +12,8 @@
     "preshare": "now login && now-clear",
     "share": "now --public",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "generate-mock-data": "babel-node buildScripts/generateMockData.js"
   },
   "author": "Cory House",
   "license": "MIT",
@@ -32,8 +33,10 @@
     "eslint-plugin-import": "2.14.0",
     "eslint-watch": "2.1.14",
     "express": "4.16.3",
+    "faker": "4.1.0",
     "html-webpack-plugin": "2.22.0",
     "jsdom": "9.8.0",
+    "json-schema-faker": "0.5.0-rc15",
     "localtunnel": "1.9.0",
     "mocha": "3.1.2",
     "nock": "8.1.0",
