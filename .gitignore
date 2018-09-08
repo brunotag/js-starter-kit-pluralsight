@@ -62,3 +62,6 @@ typings/
 
 # mock files
 *.mock.json
+
+# babel transpiled files
+.compiled

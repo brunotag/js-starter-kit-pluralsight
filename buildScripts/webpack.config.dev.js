@@ -5,11 +5,11 @@ export default {
   devtool: 'inline-source-map', //one of many modes
   noInfo: false, //verbose
   entry: [
-    path.resolve(__dirname, 'src/index')  //app entry point
+    path.resolve(__dirname, '../src/index')  //app entry point
   ],
   target: 'web', //web vs node vs elektron
   output: {
-    path: path.resolve(__dirname, 'src'),
+    path: path.resolve(__dirname, '../src'),
     publicPath: '/',
     filename: 'bundle.js'
   },
