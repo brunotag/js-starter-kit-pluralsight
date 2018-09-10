@@ -21,6 +21,24 @@
       "externalConsole": true,
       "sourceMaps": true,
       "outDir": "${workspaceRoot}/.compiled"
+    },
+    {
+      "name": "Debug Current File",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}",
+      "stopOnEntry": false,
+      "args": [],
+      "cwd": "${workspaceRoot}",
+      "preLaunchTask": "predebug",
+      "runtimeExecutable": null,
+      "runtimeArgs": [ "--nolazy" ],
+      "env": {
+          "NODE_ENV": "development"
+      },
+      "externalConsole": true,
+      "sourceMaps": true,
+      "outDir": "${workspaceRoot}/.compiled"
     }
   ]
 }

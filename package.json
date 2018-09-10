@@ -14,7 +14,7 @@
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",
     "generate-mock-data": "babel-node buildScripts/generateMockData.js"
-    "build": "babel buildScripts src -d .compiled --source-maps"
+    "compile": "babel buildScripts src -d .compiled --source-maps"
   },
   "author": "Cory House",
   "license": "MIT",
