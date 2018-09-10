@@ -1,4 +1,5 @@
 import path from 'path';
+import HTMLWebpackPlugin from 'html-webpack-plugin';
 
 export default {
   debug: true,
@@ -13,11 +14,16 @@ export default {
     publicPath: '/',
     filename: 'bundle.js'
   },
-  plugins: [],
+  plugins: [
+    new HTMLWebpackPlugin({
+      template: 'src/index.html',
+      inject: true
+    }),
+  ],
   module: {
     loaders: [ //how to handle different file types
-      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.css$/, loaders: ['style','css']} //it's efficient to bundle css into javascript files
+      { test: /\.js$/, exclude: /node_modules/, loaders: ['babel'] },
+      { test: /\.css$/, loaders: ['style', 'css'] } //it's efficient to bundle css into javascript files
     ]
   }
 }
