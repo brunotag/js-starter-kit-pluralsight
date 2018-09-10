@@ -6,16 +6,20 @@ export default {
   debug: true,
   devtool: 'source-map', //mode recommended for production
   noInfo: false, //verbose
-  entry: [
-    path.resolve(__dirname, '../src/index')  //app entry point
-  ],
+  entry: {
+    main: path.resolve(__dirname, '../src/index'),   //main entry point,
+    vendor: path.resolve(__dirname, '../src/vendor') //third party libraries entry point
+  },
   target: 'web', //web vs node vs elektron
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({ //bundle splitting
+      name: 'vendor'
+    }),
     new HTMLWebpackPlugin({
       template: 'src/index.html',
       minify: {
