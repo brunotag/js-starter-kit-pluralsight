@@ -1,5 +1,4 @@
 import {getUsers, deleteUser} from './restAPI/userRestAPI'
-
 import './index.css';
 import numeral from 'numeral';
 
