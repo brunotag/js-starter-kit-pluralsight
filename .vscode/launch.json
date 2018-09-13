@@ -20,7 +20,7 @@
       },
       "externalConsole": true,
       "sourceMaps": true,
-      "outDir": "${workspaceRoot}/.compiled"
+      "outDir": "${workspaceRoot}/.build-dev"
     },
     {
       "name": "Debug Current File",
@@ -38,7 +38,7 @@
       },
       "externalConsole": true,
       "sourceMaps": true,
-      "outDir": "${workspaceRoot}/.compiled"
+      "outDir": "${workspaceRoot}/.build-dev"
     }
   ]
 }

@@ -64,6 +64,6 @@ typings/
 *.mock.json
 
 # babel transpiled files
-.compiled
+.build-dev
 
 dist

@@ -6,22 +6,30 @@
     "prestart": "babel-node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel security-check open:src lint:watch test:watch start-mockapi",
     "open:src": "babel-node buildScripts/srcServer.js",
+
     "lint": "esw webpack.config.* src buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
+
     "security-check": "nsp check",
     "preshare": "now login && now-clear",
     "share": "now --public",
+
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",
+
     "generate-mock-data": "babel-node buildScripts/generateMockData.js",
     "prestart-mockapi": "npm run generate-mock-data",
     "start-mockapi": "json-server --watch src/restApi/userData.mock.json --port 3001",
-    "compile": "babel buildScripts src -d .compiled --source-maps",
+
+    "clean-build-dev": "rimraf ./.build-dev && mkdir .build-dev",
+    "prebuild-dev": "npm-run-all clean-build-dev test lint",
+    "build-dev": "babel buildScripts src -d .build-dev --source-maps",
+
 
     "clean-dist": "rimraf ./dist && mkdir dist",
-    "prebuild": "npm-run-all clean-dist test lint",
-    "build": "babel-node buildScripts/build.js",
-    "postbuild": "babel-node buildScripts/distServer.js"
+    "prebuild-prod": "npm-run-all clean-dist test lint",
+    "build-prod": "babel-node buildScripts/build.js",
+    "postbuild-prod": "babel-node buildScripts/distServer.js"
   },
   "author": "Cory House",
   "license": "MIT",
