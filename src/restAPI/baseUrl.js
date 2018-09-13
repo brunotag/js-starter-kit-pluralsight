@@ -1,5 +1,6 @@
 export default function getBaseUrl() {
-  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : '/';
+  const hirokuUrl = "https://nameless-hollows-16461.herokuapp.com/";
+  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : hirokuUrl;
 }
 
 //should use a library, like jQuery instead

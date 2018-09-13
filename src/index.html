@@ -4,7 +4,7 @@
     <% if (htmlWebpackPlugin.options.trackJSToken) {%>
     <script>
       window._trackJs = {
-          token: "b7e6a8f9644d4123a6aa5977d8cfd751"
+          token: '<%=htmlWebpackPlugin.options.trackJSToken%>'
       };
     </script>
     <script src="https://cdn.trackjs.com/releases/current/tracker.js">
